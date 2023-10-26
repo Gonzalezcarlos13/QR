@@ -1,0 +1,45 @@
+.fondo{
+    --background: url('../../../assets/img/verde-agua.jpg') 0/100% 100%;
+}
+
+ion-button {
+  width: 100%;
+  margin: 5px 0;
+  white-space: normal;
+  font-size: 1rem;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  ion-button {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+}
+
+ion-grid {
+  display: flex;
+  flex-direction: column; /* Cambia la dirección de la disposición a columnas */
+  align-items: center; /* Centra horizontalmente los botones en la columna */
+}
+
+ion-row {
+  width: 100%;
+}
+
+ion-col {
+  flex: 1; /* Distribuye el espacio de manera uniforme entre las columnas */
+  display: flex;
+  align-items: center; /* Centra verticalmente los botones en las columnas */
+}
+
+@media (max-width: 600px) {
+  ion-col {
+    flex: 0 0 50%; /* Limita el ancho de las columnas en pantallas pequeñas */
+  }
+}
+
+  
+  
+  

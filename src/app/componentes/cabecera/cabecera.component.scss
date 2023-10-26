@@ -1,0 +1,15 @@
+#contenedor {
+    width: 100%;
+    background-color: rgb(255, 248, 239);
+    text-align: center; /* Centro el contenido horizontalmente */
+    padding: 10px; /* Agrego un espacio alrededor del contenido para que no quede pegado al borde */
+  }
+  
+  #seccion {
+    display: inline-block; /* Hace que la sección sea un bloque en línea y se centre horizontalmente */
+  }
+  
+  #seccion img {
+    max-width: 80%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: auto;
+  }

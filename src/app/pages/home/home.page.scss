@@ -1,0 +1,68 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+.cabecera{
+  border: solid 2px red;
+  padding: 20px;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.fondo{
+  --background: url('./../../../assets/img/azulado.jpg') 0/100% 100%;
+}
+
+.titulo{
+  text-align: center;
+  margin-top: 200px;
+  font-size: xx-large;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 25px;
+}
+
+.logo{
+  width: 200px;
+  height: 200px;
+  border-radius: 0%;
+  background: url('./../../../assets/img/icono-qr.png') 0/100%;
+  margin: auto;
+}
+
+.boton{
+  margin-top: 15px;
+  text-align: center;
+}
+
+.logoH{
+  width: 100px;
+  height: 50px;
+}
+
+.contenedor-logoH{
+  display: flex;
+  justify-content: center;
+}

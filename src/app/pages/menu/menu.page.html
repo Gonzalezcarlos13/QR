@@ -1,0 +1,19 @@
+<ion-header>
+  <app-cabecera></app-cabecera>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let button of buttons; let i = index">
+        <ion-button expand="full" (click)="redirigirAPaginaDestino(button.route)">{{ button.title }}</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+
+<ion-footer>
+  <app-pie></app-pie>
+</ion-footer>

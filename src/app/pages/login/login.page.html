@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="titulo" >Login Usuario</div>
+  <div class="logo"></div>
+
+  <div class="contenedor-input">
+      <div>
+          <img src="../../../assets/img/usuario.png" alt="">
+      </div>
+      <div style="margin-left: 10px;">
+          <ion-input [(ngModel)]="usuario" label="Ingrese Usuario" labelPlacement="floating" placeholder="Ingrese"></ion-input>
+      </div>
+  </div>
+  <div class="contenedor-input">
+      <div>
+          <img src="../../../assets/img/bloquear.png" alt="">
+      </div>
+      <div style="margin-left: 10px;">
+          <ion-input [(ngModel)]="password" label="Ingrese Contraseña" type="password" labelPlacement="floating" placeholder="Ingrese"></ion-input>
+      </div>
+  </div>
+  <div style="margin: 15px;">
+      <ion-button expand="block" (click)=" redirectToMenu()">Ingresar</ion-button>
+  </div>
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>
