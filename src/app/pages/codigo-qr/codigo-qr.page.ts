@@ -9,6 +9,7 @@ export class CodigoQrPage implements OnInit {
 
   constructor() { }
 
+  datosQr:string="{ID:01,idprofe:008,hora:15:20,fecha:10-10-2023}"
   ngOnInit() {
   }
 
