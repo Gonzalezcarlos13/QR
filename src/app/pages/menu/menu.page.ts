@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from 'src/app/services/firestore.service';
-import { Listas } from '../../interface/listas';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,9 +10,9 @@ import { Router } from '@angular/router';
 export class MenuPage implements OnInit {
   buttons = [
     { title: "Inicio", route: "/home" },
-    { title: "lista", route: "/listas" },
+    { title: "lista", route: "/lista-alumnos" },
     { title: "Cuenta", route: "/cuenta" },
-    { title: "QR", route: "QR" },
+    { title: "QR", route: "codigo-qr" },
     { title: "Notas", route: "/splash" },
     { title: "", route: "" },
     { title: "", route: "" },
@@ -35,13 +34,9 @@ export class MenuPage implements OnInit {
   ngOnInit() {
 
   }
-
-  listar() {
-    this.firestoreService.listar()
-  }
-
+/*
   agregarNuevaLista() {
-    const nuevaLista: Listas = {
+    const nuevaLista: Alumno = {
       descripcion: this.descripcion,
       horario: this.horario,
       nombre_de_la_clases: this.nombre_de_la_clases
@@ -55,4 +50,5 @@ export class MenuPage implements OnInit {
         console.error('Error al agregar documento: ', error);
       });
   }
+*/
 }
