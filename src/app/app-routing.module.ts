@@ -35,6 +35,18 @@ const routes: Routes = [
     path: 'lista-alumnos',
     loadChildren: () => import('./pages/lista-alumnos/lista-alumnos.module').then( m => m.ListaAlumnosPageModule)
   },
+  {
+    path: 'lista-profesores',
+    loadChildren: () => import('./pages/lista-profesores/lista-profesores.module').then( m => m.ListaProfesoresPageModule)
+  },
+  {
+    path: 'pasar-lista',
+    loadChildren: () => import('./pages/pasar-lista/pasar-lista.module').then( m => m.PasarListaPageModule)
+  },
+  {
+    path: 'pasar-lista-detalle',
+    loadChildren: () => import('./pages/pasar-lista-detalle/pasar-lista-detalle.module').then( m => m.PasarListaDetallePageModule)
+  },
 ];
 
 @NgModule({

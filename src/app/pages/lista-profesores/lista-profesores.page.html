@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title><img src="../../../assets/img/volver.png" alt="" width="2%" id="btn-volver"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-row id="item-1"> 
+    <div style="display: flex; width: 100%;">
+      <ion-col>
+        <ion-button expand="full" id="btn-verSecciones">Ingresar a sección</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" id="btn-verQRs">Ver secciones QR</ion-button>
+      </ion-col>
+    </div>
+  </ion-row>
+  <ion-row id="item-2">
+    <img class="img-volver" src="../../../assets/img/volver.png" alt="" width="2%" id="btn-volver-1">
+    <h1>Secciones asignadas</h1>
+    <ion-col>
+      <div id="lista-alumnos">
+        <ion-list>
+          <ion-item>
+            <ion-label>Seccion 1</ion-label>
+            <ion-label><ion-button expand="full" routerLink="../pasar-lista">Ir</ion-button></ion-label>
+          </ion-item>
+        </ion-list>           
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row id="item-3">
+    <img class="img-volver" src="../../../assets/img/volver.png" alt="" width="2%" id="btn-volver-2">
+    <h1>Seccion 1</h1>
+    <qrcode [qrdata]="datosQr" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+    <h1>Seccion 2</h1>
+    <qrcode [qrdata]="datosQr" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+    <h1>Seccion 3</h1>
+    <qrcode [qrdata]="datosQr" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+    <h1>Seccion 4</h1>
+    <qrcode [qrdata]="datosQr" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+  </ion-row>
+</ion-content>

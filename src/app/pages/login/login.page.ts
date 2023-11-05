@@ -8,7 +8,6 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
   usuario:string='';
   password:string='';
 
@@ -18,15 +17,22 @@ export class LoginPage implements OnInit {
   }
 
   async redirectToMenu() {
-    if (this.usuario=="admin" && this.password=="12345") {
-        this.router.navigate(['/menu']);
-    }else{
-        let m = this.toastCtrl.create({
-          message:"Credenciales Incorrecta",
-          duration:1000,
-          position:'middle'
-        });
-        (await m).present();
+    let tipoMenu = ""
+    if(this.usuario=="profesor" && this.password=="12345") {
+      tipoMenu = "menuProfesor";
+      sessionStorage.setItem('tipoMenu', tipoMenu);
+      this.router.navigate(['/menu']);
+    } else if(this.usuario=="alumno" && this.password=="12345") {
+      tipoMenu = "menuAlumno";
+      sessionStorage.setItem('tipoMenu', tipoMenu);
+      this.router.navigate(['/menu']);
+    } else {
+      let m = this.toastCtrl.create({
+        message:"Credenciales Incorrecta",
+        duration:1000,
+        position:'middle'
+      });
+      (await m).present();
     }
   }
 }

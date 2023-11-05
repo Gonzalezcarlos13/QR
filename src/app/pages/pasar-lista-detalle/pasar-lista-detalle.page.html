@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title><img src="../../../assets/img/volver.png" alt="" width="2%" id="btn-volver" routerLink="../menu"></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-row>
+    <ion-col>
+      <img src="../../../assets/img/volver.png" routerLink="../pasar-lista" alt="" width="2%" id="btn-volver">
+      <ion-list>
+        <ion-item>
+          <ion-label>Id Asistencia</ion-label>
+          <ion-label>Fecha</ion-label>
+          <ion-label>Alumno</ion-label>
+          <ion-label>Asistió?</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>1</ion-label>
+          <ion-label>05/11/2023</ion-label>
+          <ion-label>Juanito Perez</ion-label>
+          <ion-label><ion-checkbox></ion-checkbox></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label><ion-button expand="full" color="danger">Finalizar asistencia</ion-button></ion-label>
+        </ion-item>
+        <div id="ion-lista-alumnos">
+        </div>
+      </ion-list>           
+    </ion-col>
+  </ion-row>
+</ion-content>

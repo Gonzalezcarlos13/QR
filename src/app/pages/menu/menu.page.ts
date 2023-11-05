@@ -8,20 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.page.scss'],
 })
 export class MenuPage implements OnInit {
-  buttons = [
-    { title: "Inicio", route: "/home" },
-    { title: "lista", route: "/lista-alumnos" },
-    { title: "Cuenta", route: "/cuenta" },
-    { title: "QR", route: "codigo-qr" },
-    { title: "Notas", route: "/splash" },
-    { title: "", route: "" },
-    { title: "", route: "" },
-    { title: "", route: "" },
-    { title: "", route: "" },
-    { title: "", route: "" },
-    { title: "", route: "" },
-    { title: "", route: "" },
-  ];
+  buttons: { title: string, route: string }[] = [];
   descripcion: string = '';
   horario: string = '';
   nombre_de_la_clases: string = '';
@@ -32,7 +19,48 @@ export class MenuPage implements OnInit {
   }
 
   ngOnInit() {
+    this.cargarBotones();
+  }
 
+  cargarBotones() {
+    if (sessionStorage.getItem('tipoMenu') == "menuProfesor") {
+      this.buttons = [
+        { title: "Inicio", route: "/home" },
+        { title: "Iniciar clase", route: "/lista-profesores" },
+        { title: "Cuenta", route: "/cuenta" },
+        { title: "QR", route: "codigo-qr" },
+        { title: "Notas", route: "/splash" },
+        { title: "", route: "" },
+        { title: "", route: "" },
+        { title: "", route: "" },
+        { title: "", route: "" },
+        { title: "", route: "" },
+        { title: "", route: "" },
+        { title: "", route: "" },
+      ];
+    } else if(sessionStorage.getItem('tipoMenu') == "menuAlumno") {
+      this.buttons = [
+        { title: "Inicio", route: "/home" },
+        { title: "Lista alumno", route: "/lista-alumnos" },
+        { title: "Cuenta", route: "/cuenta" },
+        { title: "QR", route: "codigo-qr" },
+        { title: "Notas", route: "/splash" },
+        { title: "", route: "" },
+        { title: "", route: "" },
+        { title: "", route: "" },
+        { title: "", route: "" },
+        { title: "", route: "" },
+        { title: "", route: "" },
+        { title: "", route: "" },
+      ];
+    } else {
+      this.buttons = [
+        { title: "", route: "" },
+        { title: "", route: "" },
+        { title: "", route: "" },
+        { title: "", route: "" },
+      ];
+    }
   }
 /*
   agregarNuevaLista() {
