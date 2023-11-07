@@ -18,12 +18,23 @@ export class LoginPage implements OnInit {
 
   async redirectToMenu() {
     let tipoMenu = ""
-    if(this.usuario=="profesor" && this.password=="12345") {
+    let usuario = ""
+    if(this.usuario=="camposo" && this.password=="12345") {
       tipoMenu = "menuProfesor";
+      usuario = "R76jJxAZC7uJQYlQLwG4";
+      sessionStorage.setItem('usuario', usuario);
       sessionStorage.setItem('tipoMenu', tipoMenu);
       this.router.navigate(['/menu']);
-    } else if(this.usuario=="alumno" && this.password=="12345") {
+    } else if(this.usuario=="carlos" && this.password=="12345") {
       tipoMenu = "menuAlumno";
+      usuario = "71x9PnWT73J2P01pf6aA";
+      sessionStorage.setItem('usuario', usuario);
+      sessionStorage.setItem('tipoMenu', tipoMenu);
+      this.router.navigate(['/menu']);
+    } else if(this.usuario=="pavel" && this.password=="12345") {
+      tipoMenu = "menuProfesor";
+      usuario = "SlhIXg4p7hvXDTGYgdAl";
+      sessionStorage.setItem('usuario', usuario);
       sessionStorage.setItem('tipoMenu', tipoMenu);
       this.router.navigate(['/menu']);
     } else {

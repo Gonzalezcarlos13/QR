@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 ///////////////////////////libreria
 import { Alumnos } from '../interface/alumnos';
+//import { Profesores } from '../interface/profesores';
 import{AngularFirestore} from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import 'firebase/compat/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -44,6 +46,10 @@ export class FirestoreService {
           }
         })
       );
+  }
+
+  buscarSecciones(usuario: string) {
+    return this.afs.collection('Seccion', ref => ref.where('profesor', '==', usuario)).valueChanges();
   }
 
   grabar(nuevaLista: Alumnos){
