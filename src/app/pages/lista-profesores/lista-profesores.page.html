@@ -1,20 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title><img src="../../../assets/img/volver.png" alt="" width="2%" id="btn-volver-01"></ion-title>
-  </ion-toolbar>
+    <ion-title>
+        <img src="../../../assets/img/volver.png" alt="" width="4%" id="btn-volver-01">
+    </ion-title>
+</ion-toolbar>
+
 </ion-header>
 
 <ion-content [fullscreen]="true" class="fondo">
-  <ion-row id="item-1"> 
-    <div style="display: flex; width: 100%;">
-      <ion-col>
-        <ion-button expand="full" id="btn-verSecciones">Ingresar a sección</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button expand="full" id="btn-verQRs">Ver secciones QR</ion-button>
-      </ion-col>
-    </div>
+  <ion-row id="item-1">
+    <ion-col size="12" size-md="6">
+      <ion-button expand="full" id="btn-verSecciones">Ingresar a sección</ion-button>
+    </ion-col>
+    <ion-col size="12" size-md="6">
+      <ion-button expand="full" id="btn-verQRs">Ver secciones QR</ion-button>
+    </ion-col>
   </ion-row>
+  
   <ion-row id="item-2">
     <img class="img-volver" src="../../../assets/img/volver.png" alt="" width="2%" id="btn-volver-1">
     <h1>Secciones asignadas</h1>

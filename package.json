@@ -33,6 +33,7 @@
     "angularx-qrcode": "^16.0.2",
     "firebase": "^10.5.0",
     "ionicons": "^7.0.0",
+    "mysql2": "^3.6.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.6.2",
     "zone.js": "~0.13.0"

@@ -1,0 +1,30 @@
+/* Estilo base para ion-item */
+ion-item {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  /* Estilo para pantallas pequeñas (teléfonos móviles) */
+  @media (max-width: 767px) {
+    ion-item {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
+  /* Estilo para pantallas medianas (tablets) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    ion-item {
+      font-size: 18px;
+      padding: 12px;
+    }
+  }
+  
+  /* Estilo para pantallas grandes (computadoras de escritorio) */
+  @media (min-width: 1024px) {
+    ion-item {
+      font-size: 20px;
+      padding: 14px;
+    }
+  }
+  

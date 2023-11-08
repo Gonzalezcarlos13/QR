@@ -52,6 +52,14 @@ export class FirestoreService {
     return this.afs.collection('Seccion', ref => ref.where('profesor', '==', usuario)).valueChanges();
   }
 
+  buscarAsignatura(seccion: string) {
+    return this.afs.collection('Seccion', ref => ref.where('seccion', '==', seccion)).valueChanges();
+  }
+
+  cargarClases(seccion: string) {
+    return this.afs.collection('Clases', ref => ref.where('seccion', '==', seccion)).valueChanges();
+  }
+
   grabar(nuevaLista: Alumnos){
     return this.afs.collection('Alumnos').add(nuevaLista);
   }

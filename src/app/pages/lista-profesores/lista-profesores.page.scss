@@ -1,7 +1,60 @@
-.fondo{
+.fondo {
     --background: rgb(104, 104, 104);
 }
 
 .img-volver {
     margin-top: 20px;
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde la parte superior según sea necesario */
+    left: 10px; /* Ajusta la distancia desde la izquierda según sea necesario */
+    z-index: 2; /* Asegura que la imagen esté en la parte superior de otros elementos */
+}
+
+
+#item-1 ion-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+@media (min-width: 768px) {
+    #item-1 ion-col {
+        flex-direction: row;
+    }
+}
+
+#btn-verSecciones,
+#btn-verQRs {
+    width: 100%;
+    margin: 10px;
+}
+
+@media (min-width: 768px) {
+    #btn-verSecciones,
+    #btn-verQRs {
+        width: auto;
+    }
+}
+
+#item-2, #item-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    #item-2, #item-3 {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+
+/* Asegúrate de que esta regla CSS esté dentro de tu hoja de estilo CSS */
+@media (max-width: 768px) {
+    #btn-volver-01 {
+        width: 14%; /* Tamaño aún más grande para teléfonos */
+    }
 }

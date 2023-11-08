@@ -80,7 +80,7 @@ export class ListaProfesoresPage implements OnInit {
         cadenaHtml += `
           <ion-item>
             <ion-label>${seccion.seccion}</ion-label>
-            <ion-label><a href="../pasar-lista"><ion-button expand="full">Ir</ion-button></a></ion-label>
+            <ion-label><a href="../pasar-lista?seccion=${seccion.seccion}"><ion-button expand="full">Ir</ion-button></a></ion-label>
           </ion-item>
         `;
       });
